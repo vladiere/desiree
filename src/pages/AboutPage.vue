@@ -1,5 +1,5 @@
 <template>
-  <q-page padding class="window-height row text-center q-gutter-y-xl">
+  <q-page padding :class="!Platform.is.mobile ? 'window-height row text-center' : 'column q-gutter-y-xl'">
     <div class="col column q-gutter-y-xl">
       <span class="text-h3 text-weight-regular">PERSONAL INFOS</span>
       <div class="row justify-between">
@@ -37,6 +37,7 @@
 
 <script setup>
 import { defineComponent } from 'vue';
+import { Platform } from 'quasar';
 
 defineComponent({
   name: 'AboutPage'
